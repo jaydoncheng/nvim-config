@@ -3,12 +3,16 @@ return {
         "williamboman/mason.nvim",
         config = function()
             require("mason").setup({
-            ui = {
+                ui = {
                     border = "rounded",
                     height = 0.8,
                 },
+                registries = {
+                    "github:nvim-java/mason-registry",
+                    "github:mason-org/mason-registry",
+                },
             })
-        end
+        end,
     },
     {
         "williamboman/mason-lspconfig.nvim",
@@ -20,11 +24,11 @@ return {
                     "html",
                     "cssls",
                     "pyright",
-                    "clangd"
+                    "clangd",
                 },
 
                 automatic_installation = true,
             })
-        end
+        end,
     },
 }

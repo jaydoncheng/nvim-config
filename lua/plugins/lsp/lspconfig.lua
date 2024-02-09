@@ -21,6 +21,7 @@ return {
         vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
 
         local capabilities = cmp_nvim_lsp.default_capabilities()
+        lspconfig.jdtls.setup({})
 
         -- if only default config is needed:
         local lsps_default = { 
